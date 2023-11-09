@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="/styles/icons/bootstrap-icons.min.css" />
+    <title>Frontend Bootcamp</title>
+</head>
+<body>
+
+    <!-- bg-dark             - to make navbar background bg-dark
+    navbar-expand-lg    - to make navbar expand at large screen
+    navbar-dark         - to make nav text in navbar to white color 
+    fixed-top           - no matter what, make it float at top
+    -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 fixed-top">
+
+        <div class="container">
+            <a class="navbar-brand" href="#">Frontend Bootcamp</a>
+        
+            <!-- When navbar is collapsed, show navbar-toggler-button
+            When expand it, show all nav-item -->
+            <button 
+            type="button" 
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- In larger screen it will show all navs
+            In smaller scrren, it will collapse and enable to click on it -->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#learn">Learn</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#questions">Questions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#instructors">Instructors</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- .text-sm-start = If greater than sm, align text to Start -->
+    <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+        <div class="container">
+            <!-- Make div and img to be vertically aligned if greater than sm -->
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
+                    <h1>Become a <span class="text-warning">Web Developer</span></h1>
+                    <!-- .lead = Make text a little bigger -->
+                    <p class="lead my-5">
+                        I'm learning very hard to become a Web Developer.
+                        My choice is Backend with Java Spring and Frontend with ReactJS.
+                    </p>
+                    <!-- .btn-lg = Make button a little bigger -->
+                    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enrol">Start The Enrollment</button>
+                </div>
+                <!-- .w-50 = 50% of its original size 
+                    .d-none -> display none
+                    .d-sm-block -> If greater than sm, display as block
+                -->
+                <img class="img-fluid w-50 d-none d-sm-block" src="images/showcase.svg" alt="Image Showcase">
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+<div class="modal fade" id="enrol" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Enrollment Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                  <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3">
+                  <label for="Phone" class="form-label">Phone number</label>
+                  <input type="text" class="form-control" id="Phone">
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Enroll</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <section class="bg-primary p-5">
+        <div class="container">
+            <!-- .justify-content-between -> Justify 2 contents between -->
+            <div class="d-sm-flex justify-content-between align-items-center">
+                <div class="mb-3 mb-md-0">
+                    <span class="text-white h3">Sign up our Newsletter</span>
+                </div>
+                <div class="d-md-flex news-input">
+                    <input class="form-control me-md-2 mb-2 mb-md-0" type="text" name="email" id="email" placeholder="Enter email">
+                    <button class="btn btn-dark btn-lg">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="m-5">
+        <div class="row gy-4 gy-lg-0">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card bg-dark text-light">
+                    <div class="card-body text-center">
+                        <div class="mb-3 h1">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+                        <h2 class="card-title mb-3">Virtual</h2>
+                        <p class="card-text mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, odit?</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card bg-secondary text-light">
+                <div class="card-body text-center">
+                    <div class="mb-3 h1">
+                        <i class="bi bi-person-square"></i>
+                    </div>
+                    <h2 class="card-title mb-3">Hybrid</h2>
+                    <p class="card-text mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, odit?</p>
+                    <a href="#" class="btn btn-dark">Read More</a>
+                </div>
+            </div>
+        </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card bg-dark text-light">
+                    <div class="card-body text-center">
+                        <div class="mb-3 h1">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h2 class="card-title mb-3">In Person</h2>
+                        <p class="card-text mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, odit?</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learn Section -->
+    <section id="learn">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md">
+                    <!-- .img-fluid -> Make image width fits into column automatically -->
+                    <img src="images/fundamentals.svg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md">
+                    <h2>Learn the funtamental</h2>
+                    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, non.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam consectetur ducimus est voluptatem quam suscipit eum velit autem tenetur vero, beatae repudiandae error labore voluptas.</p>
+                    <a href="#" class="btn btn-secondary my-3"><i class="bi bi-chevron-right"></i>Read More</a>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between bg-dark text-white p-3">
+                <div class="col-md">
+                    <h2>Learn React</h2>
+                    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, non.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam consectetur ducimus est voluptatem quam suscipit eum velit autem tenetur vero, beatae repudiandae error labore voluptas.</p>
+                    <a href="#" class="btn btn-primary my-3"><i class="bi bi-chevron-right"></i>Read More</a>
+                </div>
+                
+                <div class="col-md">
+                    <!-- .img-fluid -> Make image width fits into column automatically -->
+                    <img src="images/react.svg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Question Accordion -->
+    <section id="questions" class=" pt-3 p-lg-5 p-md-5 p-sm-3">
+        <h2 class="text-center">Frequently Asked Questions</h2>
+            <div class="accordion accordion-flush" id="questions">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Where exactly are you located?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#questions">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      How much does it cost to attend?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#questions">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      What do I need to know?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#questions">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                  </div>
+                </div>
+              </div>
+    </section>
+
+    <!-- Our Instructors -->
+    <section id="instructors" class="py-3 p-lg-5 p-md-3 bg-primary">
+        <div class="container text-center text-white">
+            <h2>Our instructors</h2>
+            <p class="lead">
+                Our instructors have at least 5+ years of experiences.
+            </p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 col-12">
+                    <div class="card bg-light">
+                        <div class="card-body text-center text-dark">
+                            <!-- rounded-circle - Make image rounded -->
+                            <img src="images/sai-mao.jpg" alt="" class="img-fluid rounded-circle mb-3">
+                            <h3 class="card-title">Sai Mao</h3>
+                            <p class="card-text">My name is Sai Mao. I'm from Muse. I teach Java and Android Development.</p>
+                            <a href="" class="bi bi-twitter text-dark mx-2"></a>                            
+                            <a href="https://www.facebook.com/sai.saing.hmine.tun" class="bi bi-facebook text-dark mx-2"></a>
+                            <a href="" class="bi bi-wechat text-dark mx-2"></a>
+                            <a href="https://github.com/SaingHmineTun" class="bi bi-github text-dark mx-2"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 col-12">
+                    <div class="card bg-light">
+                        <div class="card-body text-center text-dark">
+                            <!-- rounded-circle - Make image rounded -->
+                            <img src="images/kham-fa.jpg" alt="" class="img-fluid rounded-circle mb-3">
+                            <h3 class="card-title">Sai Kham Fa</h3>
+                            <p class="card-text">My name is Kham Fa. I'm from Muse. I teach Graphic Design and Networking.</p>
+                            <a href="" class="bi bi-twitter text-dark mx-2"></a>                            
+                            <a href="https://www.facebook.com/sai.saing.hmine.tun" class="bi bi-facebook text-dark mx-2"></a>
+                            <a href="" class="bi bi-wechat text-dark mx-2"></a>
+                            <a href="https://github.com/SaingHmineTun" class="bi bi-github text-dark mx-2"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 col-12">
+                    <div class="card bg-light">
+                        <div class="card-body text-center text-dark">
+                            <!-- rounded-circle - Make image rounded -->
+                            <img src="images/sai-sai.jpg" alt="" class="img-fluid rounded-circle mb-3">
+                            <h3 class="card-title">Sai Sai</h3>
+                            <p class="card-text">My name is Sai Sai. I'm from Kesi. I teach Shan culture and literature and exchange cash.</p>
+                            <a href="" class="bi bi-twitter text-dark mx-2"></a>                            
+                            <a href="https://www.facebook.com/sai.saing.hmine.tun" class="bi bi-facebook text-dark mx-2"></a>
+                            <a href="" class="bi bi-wechat text-dark mx-2"></a>
+                            <a href="https://github.com/SaingHmineTun" class="bi bi-github text-dark mx-2"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 col-12">
+                    <div class="card bg-light">
+                        <div class="card-body text-center text-dark">
+                            <!-- rounded-circle - Make image rounded -->
+                            <img src="images/sai-leng.jpg" alt="" class="img-fluid rounded-circle mb-3">
+                            <h3 class="card-title">Sai Leng</h3>
+                            <p class="card-text">My name is Sai Leng. I'm from Kyaukme. I teach Advanced Computer and Phtography.</p>
+                            <a href="" class="bi bi-twitter text-dark mx-2"></a>                            
+                            <a href="https://www.facebook.com/sai.saing.hmine.tun" class="bi bi-facebook text-dark mx-2"></a>
+                            <a href="" class="bi bi-wechat text-dark mx-2"></a>
+                            <a href="https://github.com/SaingHmineTun" class="bi bi-github text-dark mx-2"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container p-5">
+            <div class="row g-4">
+                <div class="col text-start lead">
+                    <h2 class="text-center mb-4">Contact Info</h2>
+                    <ul class="list-group list-group-flush lead">
+                        <li class="list-group-item"><span class="fw-bold">Main Location: </span>Pyidaungsu Street, Muse</li>
+                        <li class="list-group-item"><span class="fw-bold">Phone: </span>(+95) 9123456789</li>
+                        <li class="list-group-item"><span class="fw-bold">Email: </span>tmk.muse@gmail.com</li>
+                        <li class="list-group-item"><span class="fw-bold">Facebook: </span>TMK Group</li>
+                    </ul>
+                </div>
+                <div class="col-md  align-items-center text-center">
+                    <img src="images/tmk-member.jpg" alt="" class="img-thumbnail">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="p-5 text-white text-center bg-dark">
+        <div class="container">
+            <p class="lead">Copyright &copy; 2023 Frontend Bootcamp</p>
+            <!-- <a href="#" class="position-absolute end-0 bottom-0 h1 p-5">
+                <i class="bi bi-arrow-up-circle"></i> -->
+            </a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="styles/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>
